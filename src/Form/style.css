@@ -1,3 +1,7 @@
+.form{
+    max-width: 500px;
+}
+
 .form__legend {
     border: 2px solid rgb(1, 101, 81);
     padding-inline: 20px;
@@ -16,6 +20,18 @@
     background-color: rgb(1, 101, 81);
     border-color: white;
     box-shadow: 2px 2px 8px #ccc;
+    transition: 0.5s;
+    border-radius: 5px;
+    padding: 5px;
+}
+.form__button:hover {
+    background-color: hsl(168, 98%, 25%);
+    transform: scale(1.02);
+}
+
+.form__button:active{
+    background-color: hsl(168, 98%, 30%);
+    transform: scale(1.02);
 }
 
 .form__result {
