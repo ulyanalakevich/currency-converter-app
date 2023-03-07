@@ -16,16 +16,17 @@ export const Form = ({ calculateResult, result }) => {
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
-                <legend className="form__legend">
+                <h2 className="form__legend">
                     Kalkulator walut
-                </legend>
+                </h2>
                 <p>
-                    <label className="form__label">
+                    <label>
+                        <span className="form__label">
                         Kwota do wymiany:
+                        </span>
                         <input
                             className="form__field"
                             type="number"
-                            name="amount"
                             step="0.01"
                             min="0"
                             value={amount}
@@ -33,12 +34,14 @@ export const Form = ({ calculateResult, result }) => {
                             onChange={({ target }) => setAmount(target.value)} /> </label>
                 </p>
                 <p>
-                    <label className="form__label">
-                        Z jakiej waluty wymieniasz <select
+                    <label>
+                        <span className="form__label">
+                        Z jakiej waluty wymieniasz: 
+                        </span>
+                        <select
                             className="form__field"
-                            name="inputCurrency"
                             value={inputCurrency}
-                            onSelectChange={({ target }) => setInputCurrency(target.value)}>
+                            onChange={({ target }) => setInputCurrency(target.value)}>
                             {currencies.map((inputCurrency => (
                                 <option
                                     key={inputCurrency.name}
@@ -51,12 +54,14 @@ export const Form = ({ calculateResult, result }) => {
                     </label>
                 </p>
                 <p>
-                    <label className="form__label">
-                        Na jaką walute wymieniasz <select
+                    <label>
+                        <span  className="form__label">
+                        Na jaką walute wymieniasz: 
+                        </span>
+                        <select
                             className="form__field"
-                            name="outputCurrency"
                             value={outputCurrency}
-                            onSelectChange={({ target }) => setOutputCurrency(target.value)}>
+                            onChange={({ target }) => setOutputCurrency(target.value)}>
                             {currencies.map((outputCurrency => (
                                 <option
                                     key={outputCurrency.name}
@@ -71,7 +76,9 @@ export const Form = ({ calculateResult, result }) => {
                 <p>
                     <button className="form__button">Przelicz</button>
                 </p>
-                <p className="form__paragraph">Otrzymasz:<Result result={result} /></p>
+                <p className="form__paragraph">Otrzymasz:
+                <Result result={result} />
+                </p>
             </fieldset>
         </form >
     )

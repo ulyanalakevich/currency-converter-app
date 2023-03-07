@@ -1,33 +1,39 @@
-.form {
-    max-width: 500px;
+.form__legend {
+    padding: 5px;
+    text-align: center;
+    color: rgb(1, 101, 81);
 }
 
-.form__legend {
-    border: 2px solid rgb(1, 101, 81);
-    padding-inline: 20px;
-    background-color: rgba(255, 255, 255, 0.671);
-
+.form__label {
+    margin: 0 5px;
+    width: 100%;
+    max-width: 300px;
+    margin-right: 10px;
+    display: inline-block;
 }
 
 .form__field {
-    width: 100px;
-    border: 2px solid rgb(1, 101, 81);
-    background-color: rgba(255, 255, 255, 0.671);
+    width: 150px;
+    padding: 5px;
+    border: 1px solid rgb(1, 101, 81);
+    background-color: rgba(1, 101, 81, 0.037)
 }
 
 .form__button {
     color: rgb(255, 255, 255);
     background-color: rgb(1, 101, 81);
-    border-color: white;
-    box-shadow: 2px 2px 8px #ccc;
+    border: none;
+    box-shadow: 2px 2px 8px #aaa;
     transition: 0.5s;
     border-radius: 5px;
     padding: 5px;
+    width: 100%;
 }
 
 .form__button:hover {
     background-color: hsl(168, 98%, 25%);
     transform: scale(1.02);
+    border: none;
 }
 
 .form__button:active {
@@ -41,5 +47,6 @@
 }
 
 .form__fieldset {
-    background-color: rgba(255, 255, 255, 0.541)
+    background-color: #fff;
+    border-radius: 10px;
 }
