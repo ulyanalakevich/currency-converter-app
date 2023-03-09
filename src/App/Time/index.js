@@ -18,7 +18,7 @@ export const Time = () => {
         <div className="time">
             Dzisiaj jest
             {" "}
-            {time.toLocaleString("PL", { weekday: "long", day: "numeric", month: "long", year: "numeric" })}
+            {time.toLocaleString("PL", { weekday: "long", day: "numeric", month: "long", year: "numeric", hour: "numeric", minute: "numeric", second: "numeric" })}
         </div>
     )
 }
