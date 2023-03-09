@@ -1,7 +1,12 @@
 import "./style.css"
 
-export const Result = ({ result }) =>
+export const Result = ({ result }) => (
+    <p className="form__result">
 {!!result && (
-<strong className="form__result"> {result.targetAmount.toFixed(2)}&nbsp;{result.outputCurrency}</strong>
+    <strong>
+ {result.targetAmount.toFixed(2)}&nbsp;{result.outputCurrency}
+ </strong>
 )}
+</p>
+)
 
