@@ -22,7 +22,7 @@ export const Form = ({ calculateResult, result }) => {
                 <p>
                     <label>
                         <span className="form__label">
-                        Kwota do wymiany:
+                            Kwota do wymiany:
                         </span>
                         <input
                             className="form__field"
@@ -36,7 +36,7 @@ export const Form = ({ calculateResult, result }) => {
                 <p>
                     <label>
                         <span className="form__label">
-                        Z jakiej waluty wymieniasz: 
+                            Z jakiej waluty wymieniasz:
                         </span>
                         <select
                             className="form__field"
@@ -55,8 +55,8 @@ export const Form = ({ calculateResult, result }) => {
                 </p>
                 <p>
                     <label>
-                        <span  className="form__label">
-                        Na jaką walute wymieniasz: 
+                        <span className="form__label">
+                            Na jaką walute wymieniasz:
                         </span>
                         <select
                             className="form__field"
@@ -77,7 +77,7 @@ export const Form = ({ calculateResult, result }) => {
                     <button className="form__button">Przelicz</button>
                 </p>
                 <p className="form__paragraph">Otrzymasz:
-                <Result result={result} />
+                    <Result result={result} />
                 </p>
             </fieldset>
         </form >

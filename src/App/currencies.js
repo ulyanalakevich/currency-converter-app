@@ -1,14 +1,14 @@
 export const currencies = [
     {
-        name:"USD",
+        name: "USD",
         rate: 4.43,
     },
     {
-        name:"EUR",
+        name: "EUR",
         rate: 4.71,
     },
     {
-        name:"PLN",
+        name: "PLN",
         rate: 1.00,
     }
 ];
