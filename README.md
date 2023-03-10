@@ -16,7 +16,7 @@ You have to put amount what you want to exchange to first field, then choose cur
 
 ## Used technologies
 
-HTML, CSS, JS, BEM convention.
+HTML, CSS, JavaScript, BEM convention, ES6+ features, Normalize, GIT, React, Babel, Webpack, Media queries, Immutability, Local storage
 
 
 ## Getting Started with Create React App
