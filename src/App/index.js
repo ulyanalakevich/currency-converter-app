@@ -5,7 +5,6 @@ import { currencies } from "./currencies.js";
 import { Time } from "./Time";
 
 function App() {
-
   const [result, setResult] = useState();
 
   const calculateResult = (inputCurrency, outputCurrency, amount) => {
@@ -21,7 +20,6 @@ function App() {
       outputCurrency,
     });
   }
-
 
   return (
     <div className="app">
