@@ -1,10 +1,10 @@
-import "./style.css";
+import { Content } from "./styled";
 import { useState, useEffect } from "react";
 
 export const Time = () => {
     const [time, setTime] = useState(new Date());
 
-    const timeString = (time) => 
+    const timeString = (time) =>
         time.toLocaleString("PL", {
             weekday: "long",
             day: "numeric",
@@ -26,10 +26,10 @@ export const Time = () => {
     }, []);
 
     return (
-        <div className="time">
+        <Content>
             Dzisiaj jest
             {" "}
             {timeString(time)}
-        </div>
+        </Content>
     )
 }

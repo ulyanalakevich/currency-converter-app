@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./style.css";
+import { Fieldset, Header, Label, Component, Paragraph, ButtonStyle } from "./styled";
 import { Result } from "./Result";
 import { currencies } from "../currencies.js";
 import { Time } from "./Time";
@@ -11,23 +11,23 @@ export const Form = ({ calculateResult, result }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+        
         calculateResult(inputCurrency, outputCurrency, amount);
     }
 
     return (
-        <form className="form" onSubmit={onFormSubmit}>
-            <fieldset className="form__fieldset">
+        <form onSubmit={onFormSubmit}>
+            <Fieldset>
                 <Time />
-                <h2 className="form__legend">
+                <Header>
                     Kalkulator walut
-                </h2>
+                </Header>
                 <p>
                     <label>
-                        <span className="form__label">
+                        <Label>
                             Kwota do wymiany:
-                        </span>
-                        <input
-                            className="form__field"
+                        </Label>
+                        <Component as="input"
                             type="number"
                             step="0.01"
                             min="0"
@@ -37,11 +37,10 @@ export const Form = ({ calculateResult, result }) => {
                 </p>
                 <p>
                     <label>
-                        <span className="form__label">
+                        <Label>
                             Z jakiej waluty wymieniasz:
-                        </span>
-                        <select
-                            className="form__field"
+                        </Label>
+                        <Component
                             value={inputCurrency}
                             onChange={({ target }) => setInputCurrency(target.value)}>
                             {currencies.map((inputCurrency => (
@@ -52,16 +51,15 @@ export const Form = ({ calculateResult, result }) => {
                                     {inputCurrency.name}
                                 </option>
                             )))}
-                        </select>
+                        </Component>
                     </label>
                 </p>
                 <p>
                     <label>
-                        <span className="form__label">
+                        <Label>
                             Na jaką walute wymieniasz:
-                        </span>
-                        <select
-                            className="form__field"
+                        </Label>
+                        <Component
                             value={outputCurrency}
                             onChange={({ target }) => setOutputCurrency(target.value)}>
                             {currencies.map((outputCurrency => (
@@ -72,16 +70,16 @@ export const Form = ({ calculateResult, result }) => {
                                     {outputCurrency.name}
                                 </option>
                             )))}
-                        </select>
+                        </Component>
                     </label>
                 </p>
                 <p>
-                    <button className="form__button">Przelicz</button>
+                    <ButtonStyle>Przelicz</ButtonStyle>
                 </p>
-                <p className="form__paragraph">Otrzymasz:
+                <Paragraph>Otrzymasz:
                     <Result result={result} />
-                </p>
-            </fieldset>
+                </Paragraph>
+            </Fieldset>
         </form >
     )
 }

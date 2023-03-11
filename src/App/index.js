@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Form } from "./Form";
-import "./App.css";
 import { currencies } from "./currencies.js";
+import { Content } from "./styled";
 
 function App() {
   const [result, setResult] = useState();
@@ -21,12 +21,12 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <Content>
       <Form
         result={result}
         calculateResult={calculateResult}
       />
-    </div>
+    </Content>
   );
 }
 
