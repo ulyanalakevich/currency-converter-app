@@ -1,8 +1,19 @@
 import "./style.css";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export const Time = () => {
     const [time, setTime] = useState(new Date());
+
+    const timeString = (time) => 
+        time.toLocaleString("PL", {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            second: "numeric"
+        });
 
     useEffect(() => {
         const intervalID = setInterval(() => {
@@ -18,7 +29,7 @@ export const Time = () => {
         <div className="time">
             Dzisiaj jest
             {" "}
-            {time.toLocaleString("PL", { weekday: "long", day: "numeric", month: "long", year: "numeric", hour: "numeric", minute: "numeric", second: "numeric" })}
+            {timeString(time)}
         </div>
     )
 }

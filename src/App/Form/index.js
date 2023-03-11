@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import { Result } from "./Result";
 import { currencies } from "../currencies.js";
+import { Time } from "./Time";
 
 export const Form = ({ calculateResult, result }) => {
     const [amount, setAmount] = useState("");
@@ -16,6 +17,7 @@ export const Form = ({ calculateResult, result }) => {
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
+                <Time />
                 <h2 className="form__legend">
                     Kalkulator walut
                 </h2>
