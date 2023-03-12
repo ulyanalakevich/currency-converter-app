@@ -1,7 +1,7 @@
 import { Content } from "./styled";
 import { useCurrentDate } from "./useCurrentDate";
 
-const timeString = (time) =>
+const formatDate = (time) =>
 time.toLocaleString("PL", {
     weekday: "long",
     day: "numeric",
@@ -12,14 +12,14 @@ time.toLocaleString("PL", {
     second: "numeric"
 });
 
-export const Time = () => {
-const time = useCurrentDate();
+export const Date = () => {
+const date = useCurrentDate();
 
     return (
         <Content>
             Dzisiaj jest
             {" "}
-            {timeString(time)}
+            {formatDate(date)}
         </Content>
     )
 }
