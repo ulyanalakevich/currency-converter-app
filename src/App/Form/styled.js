@@ -12,7 +12,7 @@ export const Header = styled.h2`
     color: rgb(1, 101, 81);
 `;
 
-export const Label = styled.span`
+export const LabelText = styled.span`
     margin: 0 5px;
     width: 100%;
     max-width: 300px;
@@ -28,7 +28,7 @@ export const Component = styled.select`
 `;
 
 export const Paragraph = styled.div`
-text-align: center;
+    text-align: center;
 `;
 
 export const ButtonStyle = styled.button`
@@ -41,14 +41,14 @@ export const ButtonStyle = styled.button`
     padding: 5px;
     width: 100%;
 
-    &:hover {
-    background-color: hsl(168, 98%, 25%);
-    transform: scale(1.02);
-    border: none;
+     &:hover {
+      background-color: hsl(168, 98%, 25%);
+      transform: scale(1.02);
+      border: none;
     }
 
-    &:active {
-    background-color: hsl(168, 98%, 30%);
-    transform: scale(1.02);
+     &:active {
+      background-color: hsl(168, 98%, 30%);
+      transform: scale(1.02);
     }
 `;

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Fieldset, Header, Label, Component, Paragraph, ButtonStyle } from "./styled";
+import { Fieldset, Header, LabelText, Component, Paragraph, ButtonStyle } from "./styled";
 import { Result } from "./Result";
 import { currencies } from "../currencies.js";
-import { Time } from "./Time";
+import { Date } from "./Time";
 
 export const Form = ({ calculateResult, result }) => {
     const [amount, setAmount] = useState("");
@@ -18,15 +18,15 @@ export const Form = ({ calculateResult, result }) => {
     return (
         <form onSubmit={onFormSubmit}>
             <Fieldset>
-                <Time />
+                <Date />
                 <Header>
                     Kalkulator walut
                 </Header>
                 <p>
                     <label>
-                        <Label>
+                        <LabelText>
                             Kwota do wymiany:
-                        </Label>
+                        </LabelText>
                         <Component as="input"
                             type="number"
                             step="0.01"
@@ -37,9 +37,9 @@ export const Form = ({ calculateResult, result }) => {
                 </p>
                 <p>
                     <label>
-                        <Label>
+                        <LabelText>
                             Z jakiej waluty wymieniasz:
-                        </Label>
+                        </LabelText>
                         <Component
                             value={inputCurrency}
                             onChange={({ target }) => setInputCurrency(target.value)}>
@@ -56,9 +56,9 @@ export const Form = ({ calculateResult, result }) => {
                 </p>
                 <p>
                     <label>
-                        <Label>
+                        <LabelText>
                             Na jaką walute wymieniasz:
-                        </Label>
+                        </LabelText>
                         <Component
                             value={outputCurrency}
                             onChange={({ target }) => setOutputCurrency(target.value)}>
