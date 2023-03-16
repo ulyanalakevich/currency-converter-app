@@ -52,3 +52,16 @@ export const ButtonStyle = styled.button`
       transform: scale(1.02);
     }
 `;
+
+export const Text = styled.p`
+color: grey;
+font-size: 70%;
+`;
+
+export const Loading = styled.p`
+    color: rgb(1, 101, 81);
+`;
+
+export const Fail = styled.p`
+color: crimson;
+`;
