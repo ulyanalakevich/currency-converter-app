@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Fieldset, Header, LabelText, Component, Loading, Fail, Paragraph, Text, ButtonStyle } from "./styled";
 import { Result } from "./Result";
 import { Date } from "./Time";
-import { useRatesData } from "../currencies.js";
+import { useRatesData } from "./useRatesData.js";
 
 export const Form = () => {
     const [amount, setAmount] = useState("");
