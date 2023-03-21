@@ -54,8 +54,8 @@ export const ButtonStyle = styled.button`
 `;
 
 export const Text = styled.p`
-color: grey;
-font-size: 70%;
+   color: grey;
+   font-size: 70%;
 `;
 
 export const Loading = styled.p`
@@ -63,5 +63,5 @@ export const Loading = styled.p`
 `;
 
 export const Fail = styled.p`
-color: crimson;
+    color: crimson;
 `;
