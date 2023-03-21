@@ -13,13 +13,13 @@ time.toLocaleString("PL", {
 });
 
 export const Date = () => {
-const date = useCurrentDate();
+const currentDate = useCurrentDate();
 
     return (
         <Content>
             Dzisiaj jest
             {" "}
-            {formatDate(date)}
+            {formatDate(currentDate)}
         </Content>
     )
 }
