@@ -15,8 +15,16 @@ export const Form = () => {
         const inputRate = ratesData.rates[inputCurrency]
         const outputRate = ratesData.rates[outputCurrency]
 
+           // --------------------------old code------------------------------
+    // const calculateResult = () => {
+    //     setResult(amount * currencies.find(currency => currency.short === inCurrency).rate
+    //         /
+    //         currencies.find(currency => currency.short === outCurrency).rate)
+    // };
+
+
         setResult({
-            targetAmount: (amount * inputRate) / outputRate,
+            targetAmount: outputRate / inputRate * amount,
             outputCurrency,
         });
     }
@@ -24,7 +32,7 @@ export const Form = () => {
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        calculateResult(inputCurrency, outputCurrency, amount);
+        calculateResult(outputCurrency, inputCurrency, amount);
     }
 
     return (
@@ -89,10 +97,10 @@ export const Form = () => {
                                             onChange={({ target }) => setOutputCurrency(target.value)}>
                                             {Object.keys(ratesData.rates).map((outputCurrency => (
                                                 <option
-                                                    key={outputCurrency.name}
-                                                    value={outputCurrency.name}
+                                                    key={outputCurrency}
+                                                    value={outputCurrency}
                                                 >
-                                                    {outputCurrency.name}
+                                                    {outputCurrency}
                                                 </option>
                                             )))}
                                         </Component>
