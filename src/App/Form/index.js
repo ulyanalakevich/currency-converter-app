@@ -109,10 +109,10 @@ export const Form = () => {
                                 <p>
                                     <ButtonStyle>Przelicz</ButtonStyle>
                                 </p>
-                                <Paragraph>Otrzymasz:
+                                <Paragraph>Otrzymasz:&nbsp;
                                     <Result result={result} />
                                     <Text>Kursy walut pobierane są z Europejskiego Banku Centralnego.
-                                        <br />Aktualne na dzień:<strong>{ratesData.date}</strong>
+                                        <br />Aktualne na dzień:&nbsp;<strong>{ratesData.date}</strong>
                                     </Text>
                                 </Paragraph>
                             </>
