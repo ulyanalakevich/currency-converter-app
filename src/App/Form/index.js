@@ -104,7 +104,7 @@ export const Form = () => {
                                 <Paragraph>Otrzymasz:
                                     <Result result={result} />
                                     <Text>Kursy walut pobierane są z Europejskiego Banku Centralnego.
-                                        <br />Aktualne na dzień:<strong>{Object.keys(ratesData.date)}</strong>
+                                        <br />Aktualne na dzień:<strong>{ratesData.date}</strong>
                                     </Text>
                                 </Paragraph>
                             </>
