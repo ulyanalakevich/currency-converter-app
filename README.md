@@ -8,15 +8,14 @@ https://ulyanalakevich.github.io/currency-converter-app/
 
 ## Description
 
-This webstite to calculate any amount in three currencies PLN, USD, EUR.
-
+The application allows users to input amount of money and convert it to a different currency based on the currency rate imported from API (https://api.exchangerate.host) .
 ## Intructions
 
 You have to put amount what you want to exchange to first field, then choose currency you want to change with, and the currency which you want to get.
 
 ## Used technologies
 
-HTML, CSS, JavaScript, BEM convention, ES6+ features, Normalize, GIT, React, Babel, Webpack, Media queries, Immutability, Local storage, Custom Hooks, Styled Components
+HTML, CSS, JavaScript, BEM convention, ES6+ features, Normalize, GIT, React, Babel, Webpack, Media queries, Immutability, Local storage, Custom Hooks, Styled Components, JSX, API
 
 
 ## Getting Started with Create React App
