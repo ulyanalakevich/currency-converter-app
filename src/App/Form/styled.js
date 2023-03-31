@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
 export const Fieldset = styled.fieldset`
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.colors.white};
     border-radius: 10px;
     padding: 10px;
+    height: 360px;
 `;
 
 export const Header = styled.h2`
     padding: 5px;
     text-align: center;
-    color: rgb(1, 101, 81);
+    color: ${({ theme }) => theme.colors.green};
 `;
 
 export const LabelText = styled.span`
@@ -23,8 +24,8 @@ export const LabelText = styled.span`
 export const Component = styled.select`
     width: 150px;
     padding: 5px;
-    border: 1px solid rgb(1, 101, 81);
-    background-color: rgba(1, 101, 81, 0.037);
+    border: 1px solid ${({ theme }) => theme.colors.green};
+    background-color: ${({ theme }) => theme.colors.white};
 `;
 
 export const Paragraph = styled.div`
@@ -32,8 +33,8 @@ export const Paragraph = styled.div`
 `;
 
 export const ButtonStyle = styled.button`
-    color: rgb(255, 255, 255);
-    background-color: rgb(1, 101, 81);
+    color: ${({ theme }) => theme.colors.white};
+    background-color: #016551;
     border: none;
     box-shadow: 2px 2px 8px #aaa;
     transition: 0.5s;
@@ -59,9 +60,34 @@ export const Text = styled.p`
 `;
 
 export const Loading = styled.p`
-    color: rgb(1, 101, 81);
+    color: ${({ theme }) => theme.colors.green};
 `;
 
 export const Fail = styled.p`
     color: crimson;
 `;
+
+export const Triangle = styled.div`
+height: 0;
+width: 0;
+border-style: solid;
+border-width: 30px 30px 50px 30px;
+border-color: transparent transparent black transparent;
+margin: 50px auto;
+animation-name: triangle;
+animation-iteration-count: infinite;
+animation-duration: 1s;
+transform-origin: 30px 60px ;
+filter: drop-shadow(-2px -4px 2px rgba(0,0,0,0.5));
+
+@keyframes triangle {
+    from {
+        transform: rotate(0deg);
+        border-bottom-color: #bbb;
+    }
+    to {
+        transform: rotate(360deg);
+       border-bottom-color: ${({ theme }) => theme.colors.green};
+    }
+}
+`

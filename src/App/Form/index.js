@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Fieldset, Header, LabelText, Component, Loading, Fail, Paragraph, Text, ButtonStyle } from "./styled";
+import { Fieldset, Header, LabelText, Component, Loading, Fail, Triangle, Paragraph, Text, ButtonStyle } from "./styled";
 import { Result } from "./Result";
 import { Date } from "./Time";
 import { useRatesData } from "./useRatesData.js";
@@ -14,14 +14,6 @@ export const Form = () => {
     const calculateResult = (outputCurrency, inputCurrency, amount) => {
         const inputRate = ratesData.rates[inputCurrency]
         const outputRate = ratesData.rates[outputCurrency]
-
-           // --------------------------old code------------------------------
-    // const calculateResult = () => {
-    //     setResult(amount * currencies.find(currency => currency.short === inCurrency).rate
-    //         /
-    //         currencies.find(currency => currency.short === outCurrency).rate)
-    // };
-
 
         setResult({
             targetAmount: outputRate / inputRate * amount,
@@ -46,7 +38,9 @@ export const Form = () => {
                     ? (
                         <Loading>
                             Trwa ładowanie...
+                            <Triangle/> 
                         </Loading>
+                            
                     )
                     : (
                         ratesData.state === "error" ? (
