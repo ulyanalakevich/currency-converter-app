@@ -9,7 +9,8 @@ export const useRatesData = () => {
     useEffect (() => {
         const getData = async () => {
             try {
-                const response = await axios.get("https://api.exchangerate.host/latest?base=PLN");
+                const urlLink = "https://api.exchangerate.host/latest?base=PLN"; 
+                const response = await axios.get(urlLink);
                 const { rates, date } = await response.data;
 
                 setRatesData({
