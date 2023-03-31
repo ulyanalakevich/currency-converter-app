@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     font-family: "Montserrat", sans-serif;
     background-image: url("${background}");
-    background-position: center;
+    background-size: cover;
   }
 `;
 
