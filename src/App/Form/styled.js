@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
 export const Fieldset = styled.fieldset`
+
     background-color: ${({ theme }) => theme.colors.white};
     border-radius: 10px;
     padding: 10px;
-    height: 360px;
+
+    @media (max-width: 767px) {
+        text-align: center;
+      margin: 10px;
+  }
 `;
 
 export const Header = styled.h2`
@@ -19,6 +24,10 @@ export const LabelText = styled.span`
     max-width: 300px;
     margin-right: 10px;
     display: inline-block;
+
+    @media (max-width: 767px) {
+      margin-bottom: 10px;
+  }
 `;
 
 export const Component = styled.select`
@@ -26,6 +35,7 @@ export const Component = styled.select`
     padding: 5px;
     border: 1px solid ${({ theme }) => theme.colors.green};
     background-color: ${({ theme }) => theme.colors.white};
+    border-radius: 10px;
 `;
 
 export const Paragraph = styled.div`
