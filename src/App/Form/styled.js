@@ -36,6 +36,7 @@ export const Component = styled.select`
     border: 1px solid ${({ theme }) => theme.colors.green};
     background-color: ${({ theme }) => theme.colors.white};
     border-radius: 10px;
+    color: black;
 `;
 
 export const Paragraph = styled.div`
